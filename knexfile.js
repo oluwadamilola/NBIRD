@@ -8,21 +8,21 @@ module.exports = {
     debug: true,
     useNullAsDefault: true,
     connection: {
-      filename: path.join(__dirname, '../', 'dev.sqlite3')
+      filename: path.join(__dirname, 'dev.sqlite3')
     }
   },
 
   test: {
     client: 'sqlite3',
     connection: {
-      filename: path.join(__dirname, '../', 'test.sqlite3')
+      filename: path.join(__dirname, 'test.sqlite3')
     },
   },
 
   production: {
     client: 'sqlite3',
     connection: {
-      filename: path.join(__dirname, '../', 'prod.sqlite3')
+      filename: path.join(__dirname, 'prod.sqlite3')
     },
   }
 };
