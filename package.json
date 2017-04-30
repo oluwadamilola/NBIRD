@@ -11,7 +11,10 @@
   },
   "homepage": "https://github.com/oluwadamilola/NBIRD#readme",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "migrations": "knex migrate:latest",
+    "seed": "knex seed:run",
+    "setup": "npm run migrations && npm run seed"
   },
   "dependencies": {
     "bcrypt": "^1.0.2",

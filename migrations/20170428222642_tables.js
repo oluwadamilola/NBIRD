@@ -1,4 +1,3 @@
-
 exports.up = function(knex, Promise) {
   return Promise.all([
     knex.schema.createTableIfNotExists('births', (table) => {
@@ -20,7 +19,7 @@ exports.up = function(knex, Promise) {
       table.string('motherState');
       table.string('motherNationality');
     }),
-    knex.schema.createTableIfNotExists('births', (table) => {
+    knex.schema.createTableIfNotExists('deaths', (table) => {
       table.increments();
       table.timestamps();
       table.string('firstName');
@@ -34,6 +33,13 @@ exports.up = function(knex, Promise) {
       table.string('localGovt');
       table.string('stateOfOrigin');
       table.string('causeOfDeath');
+    }),
+    knex.schema.createTableIfNotExists('users', (table) => {
+      table.increments();
+      table.timestamps();
+      table.string('username');
+      table.string('email');
+      table.string('passHash');
     })
   ]);
 };
@@ -41,6 +47,7 @@ exports.up = function(knex, Promise) {
 exports.down = function(knex, Promise) {
   return Promise.all([
     knex.schema.dropTable('births'),
-    knex.schema.dropTable('deaths')
+    knex.schema.dropTable('deaths'),
+    knex.schema.dropTable('users'),
   ]);
 };

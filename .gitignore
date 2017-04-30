@@ -1,6 +1,7 @@
 # Logs
 logs
 *.log
+*.sqlite3
 
 # Compiled source
 build
