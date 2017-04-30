@@ -3,7 +3,7 @@ logs
 *.log
 
 # Compiled source
-build/
+build
 
 # Dependency directory
 # https://docs.npmjs.com/cli/shrinkwrap#caveats
