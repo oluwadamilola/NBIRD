@@ -1,0 +1,146 @@
+{% extends './partials/wrapper.html' %}
+
+{% block content %}
+<div class="col-sm-6 col-sm-offset-4">
+	<form action="/birth" method="POST">
+		<div class="form-group">
+			<h4 id="heading">CHILD'S DETAILS</h4>
+			<label for="Firstname">Firstname</label>
+			<input name="firstName" type="text" class="form-control" autocomplete="false" placeholder="Firstname" required>
+			<br>
+
+			<label for="Firstname">Other Names</label>
+			<input name="otherNames" type="text" class="form-control" autocomplete="false" placeholder="Other names" required>
+			<br>
+
+			<label for="date-of-birth">Date of Birth</label>
+			<input name="dob" type="date" class="form-control" placeholder="date of birth">
+			<br>
+
+			<label for="place0fbirth">Place Of Birth</label>
+			<input name="placeOfBirth" type="text" class="form-control" autocomplete="false" placeholder="place Of Birth">
+			<br>
+
+			<label for="birthsex">Sex</label>
+			<select class="form-control" name="gender" id="birthsex">
+				<option value="female">Female</option>
+				<option value="male">Male</option>
+			</select>
+			<br>
+
+			<label for="Address">Permanent Address</label>
+			<input name="address" type="text" class="form-control" autocomplete="false" placeholder="Home Address" required>
+			<br>
+
+			<label for="localgovt">Local Government Area</label>
+			<select class="form-control" name="LGA" id="">
+				<option value="">LGA</option>
+			</select>
+
+			<h4 id="heading">FATHERS DETAILS</h4>
+			<label for="Father's Fullname">Father's Name</label>
+			<input name="fatherName" type="text" class="form-control" autocomplete="false" placeholder="Father's Fullname" required>
+			<br>
+			<label for="exampleInputEmail1">Email address</label>
+			<input name="fatherEmail" type="email" class="form-control" id="exampleInputEmail1" autocomplete="false" placeholder="Email">
+			<br>
+			<label for="state_of_origin">State of Origin</label>
+			<select class="form-control" name="fatherState">
+				<option>Abia</option>
+				<option>Adamawa</option>
+				<option>Akwa Ibom</option>
+				<option>Anambra</option>
+				<option>Bauchi</option>
+				<option value="">Bayelsa</option>
+				<option value="">Benue</option>
+				<option value="">Borno</option>
+				<option value="">Cross river</option>
+				<option value="">Delta</option>
+				<option value="">Ebonyi</option>
+				<option value="">Edo</option>
+				<option value="">Ekiti</option>
+				<option value="">Enugu</option>
+				<option value="">Federal capital Territory</option>
+				<option value="">Gombe</option>
+				<option value="">Imo</option>
+				<option value="">Jigawa</option>
+				<option value="">Kaduna</option>
+				<option value="">Kano</option>
+				<option value="">Kastina</option>
+				<option value="">Kebbi</option>
+				<option value="">Kogi</option>
+				<option value="">Kwara</option>
+				<option value="">Lagos</option>
+				<option value="">Nasarawa</option>
+				<option value="">Niger</option>
+				<option value="">Ogun</option>
+				<option value="">Ondo</option>
+				<option value="">Osun</option>
+				<option value="">Oyo</option>
+				<option value="">Plateau</option>
+				<option value="">Rivers</option>
+				<option value="">Sokoto</option>
+				<option value="">Taraba</option>
+				<option value="">Yobe</option>
+				<option value="">Zamfara</option>
+			</select>
+			<br>
+			<label for="Nationality">NATIONALITY</label>
+			<input name="fatherNationality" type="text" class="form-control" placeholder="Nationality">
+			<br>
+			<h4 id="heading">MOTHERS DETAILS</h4>
+			<label for="Mother's Fullname">Mothers Name</label>
+			<input name="mothersName" type="text" class="form-control" autocomplete="false" placeholder="mother's Fullname" required>
+			<br>
+			<label for="state_of_origin">State of Origin</label>
+			<select name="motherState" class="form-control">
+				<option>Abia</option>
+				<option>Adamawa</option>
+				<option>Akwa Ibom</option>
+				<option>Anambra</option>
+				<option>Bauchi</option>
+				<option value="">Bayelsa</option>
+				<option value="">Benue</option>
+				<option value="">Borno</option>
+				<option value="">Cross river</option>
+				<option value="">Delta</option>
+				<option value="">Ebonyi</option>
+				<option value="">Edo</option>
+				<option value="">Ekiti</option>
+				<option value="">Enugu</option>
+				<option value="">Federal capital Territory</option>
+				<option value="">Gombe</option>
+				<option value="">Imo</option>
+				<option value="">Jigawa</option>
+				<option value="">Kaduna</option>
+				<option value="">Kano</option>
+				<option value="">Kastina</option>
+				<option value="">Kebbi</option>
+				<option value="">Kogi</option>
+				<option value="">Kwara</option>
+				<option value="">Lagos</option>
+				<option value="">Nasarawa</option>
+				<option value="">Niger</option>
+				<option value="">Ogun</option>
+				<option value="">Ondo</option>
+				<option value="">Osun</option>
+				<option value="">Oyo</option>
+				<option value="">Plateau</option>
+				<option value="">Rivers</option>
+				<option value="">Sokoto</option>
+				<option value="">Taraba</option>
+				<option value="">Yobe</option>
+				<option value="">Zamfara</option>
+			</select>
+			<br>
+			<label for="Nationality">Nationality</label>
+			<input name="motherNationality" type="text" class="form-control" placeholder="Nationality">
+		</div>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Email address</label>
+			<input name="motherEmail" type="email" class="form-control" id="exampleInputEmail1" autocomplete="false" placeholder="Email">
+		</div>
+		<button type="button" class="btn btn-primary btn-lg">Submit</button>
+	</form>
+</div>
+{% endblock %}

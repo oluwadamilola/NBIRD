@@ -1,0 +1,94 @@
+{% extends './partials/wrapper.html' %}
+
+{% block content %}
+<div class="col-sm-6 col-sm-offset-4">
+	<form action="/death" method="POST">
+		<h3 id="heading">DEATH REGISTRATION</h3>
+		<div class="form-group">
+			<label for="Firstname">Firstname</label>
+			<input name="firstname" type="text" class="form-control" autocomplete="false" placeholder="Firstname" required>
+			<br>
+			<label for="othernames"> Other Names</label>
+			<input name="othernames" type="text" class="form-control" placeholder="other Names" auntocomplete="false" required>
+			<br>
+			<label for="Address">Address</label>
+			<input name="Address" type="text" class="form-control" autocomplete="false" placeholder="Home Address" required>
+			<br>
+			<label for="date-of-birth">Date of Birth</label>
+			<input type="date" class="form-control" placeholder="date of birth">
+			<br>
+
+			<label for="birthsex">Gender</label>
+			<select class="form-control" name="sex" id="birthsex">
+				<option value="female">Female</option>
+				<option value="male">Male</option>
+            </select>
+			<br>
+			<label for="maritalStatus">Marital Status</label>
+			<select class="form-control" name="maritalStatus" id="maritalStatus">
+                <option value="">Single</option>
+                <option value="">Married</option>
+                <option value="">Divorced</option>
+            </select>
+			<label for="placeofdeath">Place Of Death</label>
+			<input type="text" class="form-control">
+			<br>
+			<label for="registration">Hospital Registration Number</label>
+			<input type="text" class="form-control">
+			<br>
+			<label for="localgovt">Local Government Area</label>
+			<select class="form-control" name="LGA" id="">
+				<option value="">LGA</option>
+			</select>
+			<br>
+			<div class="form-group">
+				<label for="state_of_origin">State OF Origin</label>
+				<select class="form-control">
+					<option>Abia</option>
+					<option>Adamawa</option>
+					<option>Akwa Ibom</option>
+					<option>Anambra</option>
+					<option>Bauchi</option>
+					<option value="text">Bayelsa</option>
+					<option value="text">Benue</option>
+					<option value="text">Borno</option>
+					<option value="text">Cross river</option>
+					<option value="text">Delta</option>
+					<option value="text">Ebonyi</option>
+					<option value="text">Edo</option>
+					<option value="text">Ekiti</option>
+					<option value="text">Enugu</option>
+					<option value="">Federal capital Territory</option>
+					<option value="">Gombe</option>
+					<option value="">Imo</option>
+					<option value="">Jigawa</option>
+					<option value="">Kaduna</option>
+					<option value="">Kano</option>
+					<option value="">Kastina</option>
+					<option value="">Kebbi</option>
+					<option value="">Kogi</option>
+					<option value="">Kwara</option>
+					<option value="">Lagos</option>
+					<option value="">Nasarawa</option>
+					<option value="">Niger</option>
+					<option value="">Ogun</option>
+					<option value="">Ondo</option>
+					<option value="">Osun</option>
+					<option value="">Oyo</option>
+					<option value="">Plateau</option>
+					<option value="">Rivers</option>
+					<option value="">Sokoto</option>
+					<option value="">Taraba</option>
+					<option value="">Yobe</option>
+					<option value="">Zamfara</option>
+					</select>
+			</div>
+		</div>
+		<label for="Nationality">Nationality</label>
+		<input type="text" class="form-control" placeholder="Nationality" required>
+		<label for="causes">Cause of Death</label>
+		<textarea class="form-control" rows="3"></textarea>
+		<button name="Register" class="btn btn-lg btn-primary" type="submit">SUBMIT</button>
+	</form>
+</div>
+{% endblock %}
