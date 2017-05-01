@@ -1,0 +1,11 @@
+# Logs
+logs
+*.log
+*.sqlite3
+
+# Compiled source
+build
+
+# Dependency directory
+# https://docs.npmjs.com/cli/shrinkwrap#caveats
+node_modules

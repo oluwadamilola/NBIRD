@@ -1,0 +1,110 @@
+{% extends './partials/wrapper.html' %} {% block content %}
+<div class="col-sm-6 col-sm-offset-4">
+	<form action="/birth" method="POST">
+		{% if (message) %}
+		<div class="alert alert-danger">{{ message }}</div>
+		{% endif %}
+		<h4 id="heading">CHILD'S DETAILS</h4>
+
+		<div class="form-group">
+			<label for="firstName">Firstname</label>
+			<input name="firstName" id="firstName" type="text" class="form-control" autocomplete="off" placeholder="Firstname" required>
+		</div>
+
+		<div class="form-group">
+			<label for="otherName">Other Names</label>
+			<input name="otherName" id="otherName" type="text" class="form-control" autocomplete="off" placeholder="Other names" required>
+		</div>
+
+		<div class="form-group">
+			<label for="date-of-birth">Date of Birth</label>
+			<input name="dob" id="date-of-birth" type="date" class="form-control" placeholder="date of birth">
+		</div>
+
+		<div class="form-group">
+			<label for="placeOfbirth">Place Of Birth</label>
+			<input name="placeOfBirth" id="placeOfbirth" type="text" class="form-control" autocomplete="off" placeholder="place Of Birth">
+		</div>
+
+		<div class="form-group">
+			<label for="birthsex">Sex</label>
+			<select class="form-control" name="gender" id="birthsex">
+				<option value="female">Female</option>
+				<option value="male">Male</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label for="address">Permanent Address</label>
+			<input name="address" id="address" type="text" class="form-control" autocomplete="off" placeholder="Home Address" required>
+		</div>
+
+		<div class="form-group">
+			<label for="localgovt">Local Government Area</label>
+			<input name="localGovt" class="form-control" id="localgovt">
+		</div>
+
+		<h4 id="heading">FATHER'S DETAILS</h4>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="fatherName">Father's Name</label>
+					<input name="fatherName" id="fatherName" type="text" class="form-control" autocomplete="off" placeholder="Father's Fullname" required>
+				</div>
+
+				<div class="form-group">
+					<label for="fatherEmail">Email address</label>
+					<input name="fatherEmail" type="email" class="form-control" id="fatherEmail" autocomplete="off" placeholder="Email">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="fatherState">State of Origin</label>
+					<select class="form-control" name="fatherState" id="fatherState">
+						{% include './partials/state-options.html' %}
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="fatherNationality">Nationality</label>
+					<select name="fatherNationality" class="form-control" id="fatherNationality">
+						{% include './partials/country-options.html' %}
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<h4 id="heading">MOTHER'S DETAILS</h4>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="motherName">Mother's Name</label>
+					<input name="motherName" id="motherName" type="text" class="form-control" autocomplete="off" placeholder="mother's Fullname" required>
+				</div>
+
+				<div class="form-group">
+					<label for="motherEmail">Email address</label>
+					<input name="motherEmail" type="email" class="form-control" id="motherEmail" autocomplete="off" placeholder="Email">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="motherState">State of Origin</label>
+					<select name="motherState" class="form-control" id="motherState">
+						{% include './partials/state-options.html' %}
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="motherNationality">Nationality</label>
+					<select name="motherNationality" class="form-control" id="motherNationality">
+						{% include './partials/country-options.html' %}
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+	</form>
+</div>
+{% endblock %}
