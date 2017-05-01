@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "compilerOptions": {
     "module": "commonjs",
@@ -17,3 +18,24 @@
     "./typings/**/*.d.ts"
   ]
 }
+=======
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "lib": [
+      "es6",
+      "es2016.array.include",
+      "es2015.promise"
+    ],
+    "outDir": "build"
+  },
+  "filesGlob": [
+    "src/**/*.ts",
+    "./typings/**/*.d.ts"
+  ]
+}
+>>>>>>> refs/remotes/origin/master
