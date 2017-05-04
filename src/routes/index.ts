@@ -3,6 +3,7 @@ const router = express.Router();
 import { getBirthForm, registerBirth } from '../controllers/birth';
 import { getDeathForm, registerDeath } from '../controllers/death';
 import { getLoginForm, login } from '../controllers/auth';
+import { getReport } from '../controllers/report';
 
 function auth(req: express.Request, res: express.Response, next: express.NextFunction) {
   if (req.session && req.session.username) {
@@ -29,9 +30,7 @@ router.post('/birth', auth, registerBirth);
 router.get('/death', auth, getDeathForm);
 router.post('/death', auth, registerDeath);
 
-router.get('/report', auth, function(req, res, next) {
-  res.render('reports');
-});
+router.get('/report', auth, getReport);
 
 router.get('/login', getLoginForm);
 router.post('/login', login);

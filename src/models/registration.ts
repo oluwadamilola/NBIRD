@@ -23,6 +23,23 @@ export default class Registration {
       })
       .into(Registration.deathTableName);
   }
+
+  async getReport(): Promise<{ birthCount: number, deathCount: number }> {
+    return await knex
+      .transaction((trx) => {
+        return trx
+          .count('id as birthCount')
+          .from(Registration.birthTableName)
+          .then(([{ birthCount }]) => {
+            return trx
+              .count('id as deathCount')
+              .from(Registration.deathTableName)
+              .then(([{ deathCount }]) => {
+                return { birthCount, deathCount };
+              });
+          });
+      });
+  }
 }
 
 interface BirthRegistrationFields {
