@@ -1,5 +1,6 @@
 import * as express from 'express';
 import Registration from '../models/registration';
+import { wss } from '../index';
 
 export function getBirthForm(req: express.Request, res: express.Response) {
   res.render('birthreg');
@@ -52,4 +53,5 @@ export async function registerBirth(req: express.Request, res: express.Response)
   }
 
   res.status(200).render('birthreg', { message: 'Registration Successful.' });
+  wss.emit('birth');
 }

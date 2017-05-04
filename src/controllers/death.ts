@@ -1,5 +1,6 @@
 import * as express from 'express';
 import Registration from '../models/registration';
+import { wss } from '../index';
 
 export function getDeathForm(req: express.Request, res: express.Response) {
   res.render('deathreg');
@@ -44,4 +45,5 @@ export async function registerDeath(req: express.Request, res: express.Response)
   }
 
   res.status(200).render('deathreg', { message: 'Registration Successful.' });
+  wss.emit('death');
 }

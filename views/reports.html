@@ -1,41 +1,26 @@
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Olukoju Damilola">
-    <link rel="icon" href="../../favicon.ico">
-
-    <title>NBIRD MONITORING SYSTEM</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-    <link href="css/loginpage.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/report.css">
-</head>
-<body>
 {% extends './partials/wrapper.html' %} {% block content %}
-    <div class="col-sm-6 col-sm-offset-3">
-       <div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Live Count of Births</h3>
-  </div>
-  <div class="panel-body">
-    <h2 class="livecount">123567</h2>
-  </div>
+<div class="col-sm-6 col-sm-offset-4">
+	<div class="row" style="margin-top: 25px;">
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Live Count of Births</h3>
+				</div>
+				<div class="panel-body">
+					<h2 class="livecount text-center" id="liveCount">{{ birthCount }}</h2>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Live Count of Deaths</h3>
+				</div>
+				<div class="panel-body">
+					<h2 class="livecount text-center" id="deathCount">{{ deathCount }}</h2>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Live Count of Deaths</h3>
-  </div>
-  <div class="panel-body">
-    <h2 class="livecount">123567</h2>
-  </div>
-</div>
-    </div>
-<img src="img\start.jpg" alt="" width="250" height="200">
-    
-{% endblock %}
-</body>
-</html>
+<img src="img\start.jpg" alt="" width="250" height="200"> {% endblock %}
